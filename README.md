@@ -34,8 +34,7 @@ prez.html
 
 Copy the contents of `bower_components/decks.js/core`,
 `bower_components/decks.js/extensions`, and `bower_components/deck.js/themes`
-into their corresponding folder listed above. You'll also need to
+into their corresponding folder listed above. You'll also need to move
 `bower_components/deck.js/jquery-1.7.2.min.js` and
-`bower_components/deck.js/modernizr.custom.js` in that `vendor` folder - oh and
-rename `jquery-1.7.2.min.js` to just `jquery.min.js`. Whew. Now, at long last,
-you can be blowing people away with your sweet presentations.
+`bower_components/deck.js/modernizr.custom.js` into that `vendor` folder. Whew.
+Now, at long last, you can be blowing people away with your sweet presentations.
