@@ -18,23 +18,7 @@ bower install
 
 Now run `grunt` to turn `prez.md` into `prez.html`. By default we're treating a
 string of three newlines as "slide breaks" for presentation purposes. That's it!
-Go on and share your presentation html file. Well... almost...
+Go on and share your presentation html file.
 
-For ease of development that final `prez.html` page references some external
-assets. You'll need to create a new folder inside your dropbox's public folder
-that looks like this:
-
-```
-core/
-extensions/
-themes/
-vendor/
-prez.html
-```
-
-Copy the contents of `bower_components/decks.js/core`,
-`bower_components/decks.js/extensions`, and `bower_components/deck.js/themes`
-into their corresponding folder listed above. You'll also need to move
-`bower_components/deck.js/jquery-1.7.2.min.js` and
-`bower_components/deck.js/modernizr.custom.js` into that `vendor` folder. Whew.
-Now, at long last, you can be blowing people away with your sweet presentations.
+NOTE: Want to change themes/transitions? Modify the input for the grunt
+`cssmin:prep` task.
