@@ -1,7 +1,7 @@
 {
   "name": "bedecked",
   "version": "0.0.0",
-  "description": "Turn markdown files into html presentations",
+  "description": "Turn markdown files into html presentations you can share from dropbox",
   "main": "lib/bedecked.js",
   "private": true,
   "scripts": {
