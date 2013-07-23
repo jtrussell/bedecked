@@ -1,0 +1,30 @@
+{
+  "name": "bedecked",
+  "version": "0.0.0",
+  "description": "Turn markdown files into html presentations",
+  "main": "lib/bedecked.js",
+  "private": true,
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jtrussell/node-bedecked.git"
+  },
+  "keywords": [
+    "markdown",
+    "html",
+    "presentation"
+  ],
+  "author": "Justin Russell",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "~0.2.9",
+    "mustache": "~0.7.2",
+    "underscore": "~1.5.1",
+    "async": "~0.2.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
