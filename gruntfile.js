@@ -7,7 +7,38 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // [todo] jshint, tests [/todo]
+    watch: {
+      options: {
+        livereload: true
+      },
+      prezmd: {
+        files: ['prez.md'],
+        tasks: ['prez']
+      }
+    },
+
+    open: {
+      prez: {
+        path: 'http://localhost:3000/prez.html'
+      }
+    },
+
+    connect: {
+      options: {
+        port: 3000,
+        hostname: 'localhost'
+      },
+      prez: {
+        options: {
+          middleware: function(connect) {
+            return [
+              require('connect-livereload')(),
+              connect['static']('tmp')
+            ];
+          }
+        }
+      }
+    },
 
     clean: {
       prep: ['.tmp']
@@ -75,15 +106,13 @@ module.exports = function(grunt) {
       , prezMd = grunt.file.read('prez.md');
 
     bedecked.makePrez(prezMd, function(err, prezHtml) {
-      grunt.file.write('prez.html', prezHtml);
-      grunt.log.ok('prez.html written!');
+      grunt.file.write('tmp/prez.html', prezHtml);
+      grunt.log.ok('tmp/prez.html written!');
       done();
     });
   });
 
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   grunt.registerTask('prep', [
     'clean',
@@ -92,10 +121,15 @@ module.exports = function(grunt) {
     'prepTpl'
   ]);
 
-  // Register task(s)
   grunt.registerTask('default', [
     'prep',
     'prez'
+  ]);
+
+  grunt.registerTask('server', [
+    'connect',
+    'open',
+    'watch'
   ]);
 
 };
