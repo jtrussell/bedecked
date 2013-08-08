@@ -126,6 +126,8 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('server', [
+    'prep',
+    'prez',
     'connect',
     'open',
     'watch'
