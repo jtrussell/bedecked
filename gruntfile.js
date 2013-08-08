@@ -66,7 +66,6 @@ module.exports = function(grunt) {
       prez: {
         files: {
           '.tmp/prez.js': [
-            'bower_components/deck.js/jquery-1.7.2.min.js',
             'bower_components/deck.js/modernizr.custom.js',
             'bower_components/deck.js/core/deck.core.js',
             'bower_components/deck.js/core/deck.core.js',

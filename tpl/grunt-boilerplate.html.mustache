@@ -12,50 +12,37 @@
   </style>
 </head>
 <body class="deck-container">
+  {{{slides}}}
 
-<!-- Begin slides. Just make elements with a class of slide. -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
 
-{{{slides}}}
+  <p class="deck-status">
+    <span class="deck-status-current"></span>
+    /
+    <span class="deck-status-total"></span>
+  </p>
 
-<!-- End slides. -->
+  <form action="." method="get" class="goto-form">
+    <label for="goto-slide">Go to slide:</label>
+    <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+    <datalist id="goto-datalist"></datalist>
+    <input type="submit" value="Go">
+  </form>
 
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
 
-<!-- Begin extension snippets. Add or remove as needed. -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 
-<!-- deck.navigation snippet -->
-<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+  <script type="text/javascript" charset="utf-8">
+    {{{scripts}}}
+  </script>
 
-<!-- deck.status snippet -->
-<p class="deck-status">
-	<span class="deck-status-current"></span>
-	/
-	<span class="deck-status-total"></span>
-</p>
-
-<!-- deck.goto snippet -->
-<form action="." method="get" class="goto-form">
-	<label for="goto-slide">Go to slide:</label>
-	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
-	<datalist id="goto-datalist"></datalist>
-	<input type="submit" value="Go">
-</form>
-
-<!-- deck.hash snippet -->
-<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
-
-<!-- End extension snippets. -->
-
-<script type="text/javascript" charset="utf-8">
-  {{{scripts}}}
-</script>
-
-<!-- Initialize the deck. You can put this in an external file if desired. -->
-<script>
-	$(function() {
-		$.deck('.slide');
-	});
-</script>
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
 </body>
 </html>
 
