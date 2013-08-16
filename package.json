@@ -22,7 +22,9 @@
     "marked": "~0.2.9",
     "mustache": "~0.7.2",
     "underscore": "~1.5.1",
-    "async": "~0.2.9"
+    "async": "~0.2.9",
+    "cssmin": "~0.4.1",
+    "uglify-js": "~2.3.6"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
