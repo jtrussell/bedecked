@@ -7,12 +7,32 @@
 
 	<title>Your deck.js Presentation</title>
 
+  <!-- Core -->
   <style type="text/css" media="all">
-   {{{styles}}}
+   {{{core.css}}}
   </style>
+
+  <!-- Theme -->
+  <style type="text/css" media="all">
+    {{{theme.css}}}
+  </style>
+
+  <!-- Transition -->
+  <style type="text/css" media="all">
+    {{{transition.css}}}
+  </style>
+
+  {{#extensions}}
+  <!-- Extension: {{name}} -->
+  <style type="text/css" media="all">
+    {{{css}}}
+  </style>
+  {{/extensions}}
 </head>
 <body class="deck-container">
-  {{{slides}}}
+  {{#slides}}
+    {{{html}}}
+  {{/slides}}
 
   <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
   <a href="#" class="deck-next-link" title="Next">&#8594;</a>
@@ -32,11 +52,22 @@
 
   <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  {{#vendor}}
+  <!-- {{name}} -->
+  {{{js}}}
+  {{/vendor}}
 
+  <!-- Core -->
   <script type="text/javascript" charset="utf-8">
-    {{{scripts}}}
+    {{{core.js}}}
   </script>
+
+  {{#extensions}}
+  <!-- Extension: {{name}} -->
+  <script type="text/javascript" charset="utf-8">
+    {{{js}}}
+  </script>
+  {{#extensions}}
 
   <script>
     $(function() {
@@ -45,5 +76,3 @@
   </script>
 </body>
 </html>
-
-

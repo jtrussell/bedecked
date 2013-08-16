@@ -68,7 +68,6 @@ module.exports = function(grunt) {
           '.tmp/prez.js': [
             'bower_components/deck.js/modernizr.custom.js',
             'bower_components/deck.js/core/deck.core.js',
-            'bower_components/deck.js/core/deck.core.js',
             'bower_components/deck.js/extensions/hash/deck.hash.js',
             'bower_components/deck.js/extensions/menu/deck.menu.js',
             'bower_components/deck.js/extensions/goto/deck.goto.js',
