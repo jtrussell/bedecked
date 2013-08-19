@@ -16,6 +16,9 @@
     "html",
     "presentation"
   ],
+  "bin": {
+    "bedecked": "bin/bedecked"
+  },
   "author": "Justin Russell",
   "license": "MIT",
   "dependencies": {
@@ -24,7 +27,8 @@
     "underscore": "~1.5.1",
     "async": "~0.2.9",
     "cssmin": "~0.4.1",
-    "uglify-js": "~2.3.6"
+    "uglify-js": "~2.3.6",
+    "commander": "~2.0.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

@@ -12,6 +12,20 @@
    {{{core.css}}}
   </style>
 
+  {{#cdn}}
+    <!-- CDN: {{name}} -->
+    {{#css}}
+    <link rel="stylesheet" href="{{{.}}}" />
+    {{/css}}
+  {{/cdn}}
+
+  {{#vendor}}
+  <!-- Vendor: {{name}} -->
+  <style type="text/css" media="all">
+    {{{css}}}
+  </style>
+  {{/vendor}}
+
   <!-- Theme -->
   <style type="text/css" media="all">
     {{{theme.css}}}
@@ -31,7 +45,9 @@
 </head>
 <body class="deck-container">
   {{#slides}}
+  <section class="slide">
     {{{html}}}
+  </section>
   {{/slides}}
 
   <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
@@ -52,9 +68,18 @@
 
   <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
 
+  {{#cdn}}
+  <!-- CDN: {{name}} -->
+  {{#js}}
+  <script src="{{{.}}}" type="text/javascript" charset="utf-8"></script>
+  {{/js}}
+  {{/cdn}}
+
   {{#vendor}}
-  <!-- {{name}} -->
-  {{{js}}}
+  <!-- Vendor: {{name}} -->
+  <script type="text/javascript" charset="utf-8">
+    {{{js}}}
+  </script>
   {{/vendor}}
 
   <!-- Core -->
@@ -67,7 +92,7 @@
   <script type="text/javascript" charset="utf-8">
     {{{js}}}
   </script>
-  {{#extensions}}
+  {{/extensions}}
 
   <script>
     $(function() {
