@@ -1,0 +1,9 @@
+{
+  "name": "deck.js",
+  "version": "0.0.0",
+  "commit": "4601d4da2bf8c803c9ca55c9d616b568314d3cfa",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/imakewebthings/deck.js.git"
+  }
+}

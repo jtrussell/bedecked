@@ -1,0 +1,352 @@
+@charset "UTF-8";
+
+/**
+ * Base: Container & Slides;
+ *
+ *
+ */
+.deck-container {
+  font-family: "UltraRegular", Georgia, sans-serif;
+  font-size: 1.35em;
+}
+.deck-container > .slide {
+  /*background-color: #eee;*/
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  color: #444;
+}
+.deck-container > .slide .deck-before,
+.deck-container > .slide .deck-previous {
+  opacity: 0.4;
+}
+.deck-container > .slide .deck-before:not(.deck-child-current) .deck-before,
+.deck-container > .slide .deck-before:not(.deck-child-current) .deck-previous,
+.deck-container > .slide .deck-previous:not(.deck-child-current) .deck-before,
+.deck-container > .slide .deck-previous:not(.deck-child-current) .deck-previous {
+  opacity: 1;
+}
+.deck-container > .slide .deck-child-current {
+  opacity: 1;
+}
+
+/*Box class set the presentation to the center*/
+.deck-container.box {
+  width: auto;
+  max-width: 864px;
+  margin: 20px auto 24px auto;
+  min-height: 560px;
+  font-size: 16px;
+  border: 1px solid #999;
+  background-color: #eee;
+  font-size: 1em;
+}
+.deck-container.box .slide {
+  background: none;
+}
+/*Apply boxshadow if possible*/
+.boxshadow .deck-container.box {
+  border: none;/*remove border*/
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * Headings & Typography
+ *
+ *
+ */
+.deck-container .slide h1,
+.deck-container .slide h2 {
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.deck-container .slide h2 {
+  border-bottom: 0;
+  padding-top: 0;
+  margin: .33333em 0;
+}
+
+
+/**
+ * Introduction Slide
+ *
+ *
+ */
+.deck-container .slide:first-of-type,
+.deck-container .slide.introduction {
+  text-align: center;
+}
+.deck-container .slide:first-of-type div,
+.deck-container .slide.introduction > div {
+  padding-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.deck-container .slide:first-of-type hgroup,
+.deck-container .slide.introduction hgroup {
+  margin-bottom: 32px;
+}
+.deck-container .slide:first-of-type h1,
+.deck-container .slide.introduction h1 {
+  position: static;
+  font-size: 84px;
+  font-weight: normal;
+  margin: 0 0 8px 0;
+  padding: 0 48px;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+}
+.deck-container .slide:first-of-type h2,
+.deck-container .slide.introduction h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #999;
+  font-weight: 100;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+/**
+ * Code Preview
+ *
+ *
+ */
+.deck-container .slide pre {
+  border-color: #cde;
+  background: #F6F6F6;
+  position: relative;
+  z-index: auto;
+  /* http://nicolasgallagher.com/css-drop-shadows-without-images/ */
+}
+.slide pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 0.3em;
+  border: 0.3px solid #888;
+}
+
+.borderradius .deck-container .slide pre {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.csstransforms.boxshadow .deck-container .slide pre > :first-child:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.csstransforms.boxshadow .deck-container .slide pre:before, .csstransforms.boxshadow .deck-container .slide pre:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  bottom: 15px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+  -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+}
+.csstransforms.boxshadow .deck-container .slide pre:before {
+  left: 10px;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.csstransforms.boxshadow .deck-container .slide pre:after {
+  right: 10px;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.deck-container .slide code {
+  color: #789;
+}
+
+/**
+ * Blockquote
+ *
+ *
+ */
+.deck-container .slide blockquote {
+  font-size: 2em;
+  padding: 1em 2em .5em 2em;
+  color: #000;
+  background: #fff;
+  position: relative;
+  border: 1px solid #cde;
+  z-index: auto;
+}
+.borderradius .deck-container .slide blockquote {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.boxshadow .deck-container .slide blockquote > :first-child:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.boxshadow .deck-container .slide blockquote:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 50%;
+  -moz-border-radius: 10px/100px;
+  border-radius: 10px/100px;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+.deck-container .slide blockquote p {
+  margin: 0;
+}
+.deck-container .slide blockquote cite {
+  font-size: .5em;
+  font-style: normal;
+  font-weight: bold;
+  color: #888;
+}
+.deck-container .slide blockquote:before {
+  content: "“";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 5em;
+  line-height: 1;
+  color: #ccf0f0;
+  z-index: 1;
+}
+.deck-container .slide ::-moz-selection {
+  background: #08455f;
+  color: #fff;
+}
+.deck-container .slide ::selection {
+  background: #08455f;
+  color: #fff;
+}
+
+
+
+/**
+ * Links
+ *
+ *
+ */
+.deck-container .slide a,
+.deck-container .slide a:hover,
+.deck-container .slide a:focus,
+.deck-container .slide a:active,
+.deck-container .slide a:visited {
+  /*color: #599;*/
+  color: #999;
+  text-decoration: none;
+}
+.deck-container .slide a:hover,
+.deck-container .slide a:focus {
+  text-decoration: underline;
+}
+
+
+/**
+ * Navigation Arrows
+ *
+ *
+ */
+.deck-container .deck-prev-link,
+.deck-container .deck-next-link {
+  background: #fff;
+  opacity: 0.5;
+}
+.deck-container .deck-prev-link,
+.deck-container .deck-prev-link:hover,
+.deck-container .deck-prev-link:focus,
+.deck-container .deck-prev-link:active,
+.deck-container .deck-prev-link:visited,
+.deck-container .deck-next-link,
+.deck-container .deck-next-link:hover,
+.deck-container .deck-next-link:focus,
+.deck-container .deck-next-link:active,
+.deck-container .deck-next-link:visited {
+  /* color: #599; */
+  color: #999;
+}
+.deck-container
+.deck-prev-link:hover,
+.deck-container
+.deck-prev-link:focus,
+.deck-container
+.deck-next-link:hover,
+.deck-container
+.deck-next-link:focus {
+  opacity: 1;
+  text-decoration: none;
+}
+
+/**
+ * Progress Status
+ *
+ *
+ */
+.deck-container .deck-status {
+  font-size: 0.6666em;
+}
+
+/**
+ * Misc
+ *
+ *
+ */
+.deck-container.deck-menu .slide {
+  background: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.rgba .deck-container.deck-menu .slide {
+  background: rgba(0, 0, 0, 0.1);
+}
+.deck-container.deck-menu .slide.deck-current, .rgba .deck-container.deck-menu .slide.deck-current, .no-touch .deck-container.deck-menu .slide:hover {
+  background: #fff;
+}
+.deck-container .goto-form {
+  background: #fff;
+  border: 1px solid #cde;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.boxshadow .deck-container .goto-form {
+  -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
