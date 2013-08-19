@@ -1,42 +1,62 @@
 # Bedecked
 
-Bedecked is a small app that lets you convert markdown files to portable html5
-presentations.
+Bedecked lets you convert markdown files to portable html5 presentations.
 
 Inspired by [hackynote](https://github.com/thiagofelix/hackynote), I wanted a
 simple way to build snazzy presentations from markdown files that I could export
 as standalone HTML. Pop those guys in your public dropbox folder (or S3, or
 whatever) and share.
 
-Right now we're in the "proof of concept" stage. It's working, it does things
-that are arguably useful... but only enough for me to pump out a few
-presentations for this week :o.
-
 ## Installation
 
-To give it a try checkout this repo, `cd` on in and...
+Install bedecked globally to get access to the cli with:
 
 ```
-npm install
-bower install
+npm install -g bedecked
+```
+
+You can also use bedecked locally in your app:
+
+```
+npm install --save bedecked
 ```
 
 ## Usage
 
-`prez.md` is your presentation "script", use three or more new lines in a row to
-separate slides. This ultimately gets baked into `tmp/prez.html`. We've got a
-few helpful grunt tasks to get you there:
+### CLI
 
-  - `grunt` Run without arguments to build a presentation html file
-  - `grunt server` Makes your presentation, shows it in a browser, then waits
-    for changes so it can show you those too.
+After a global install you'll have access to the `bedecked` command:
 
-Right now the only way to change themes is to modify the files included in the
-`cssmin:prep` task.
+```
+bedecked [options] <file>
+```
 
-## Possible future work?
+Where `<file>` is your markdown file. Your html presentation will be written to
+stdout so you'll most often be sending that directly to a file:
 
-  - `bedecked-cli` markdown file in, prez out
+```
+bedecked my_prez.md > my_prez.html
+```
+
+Run `bedecked --help` for more information.
+
+**NOTE**: bedecked looks for three new line (or two blank lines) in a row to
+insert slide breaks.
+
+### API
+
+The bedecked module exports a single method:
+
+```javascript
+var bedecked = require('bedecked')
+  , presentationFile = 'path/to/my/prez.md'
+  , opts = {/* ... */}
+  , callback = function(err, html) {/* do something with html */};
+
+bedecked(presentationFile, opts, callback);
+```
+
+*(additional info coming soon)*
 
 ## License
 
