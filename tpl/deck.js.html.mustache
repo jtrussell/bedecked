@@ -19,11 +19,21 @@
     {{/css}}
   {{/cdn}}
 
+  {{#extensions}}
+  <!-- Extension: {{name}} -->
+  <style type="text/css" media="all">
+    {{{css}}}
+  </style>
+  {{/extensions}}
+
   {{#vendor}}
   <!-- Vendor: {{name}} -->
   <style type="text/css" media="all">
     {{{css}}}
   </style>
+  <script type="text/javascript" charset="utf-8">
+    {{{js}}}
+  </script>
   {{/vendor}}
 
   <!-- Theme -->
@@ -35,13 +45,6 @@
   <style type="text/css" media="all">
     {{{transition.css}}}
   </style>
-
-  {{#extensions}}
-  <!-- Extension: {{name}} -->
-  <style type="text/css" media="all">
-    {{{css}}}
-  </style>
-  {{/extensions}}
 </head>
 <body class="deck-container">
   {{#slides}}
@@ -77,9 +80,6 @@
 
   {{#vendor}}
   <!-- Vendor: {{name}} -->
-  <script type="text/javascript" charset="utf-8">
-    {{{js}}}
-  </script>
   {{/vendor}}
 
   <!-- Core -->
