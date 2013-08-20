@@ -6,15 +6,70 @@ var program = require('commander');
 
 program
   .version('0.0.0')
-  .usage('[options] <file>')
-  .option('--theme <theme>', 'Theme by name [hacky|mnml|neon|swiss|web-2.0]')
-  .option('--transition <theme>', 'Transition by name [fade|horizontal-slide|rubik|vertical-slide]')
+  .usage('[options] <file> | help <option>')
+  .option('--theme <name>', 'Set theme by name (protip: "bedecked help theme")')
+  .option('--transition <name>', 'Set transition by name (protip: "bedecked help transition")')
+
   //.option('--core-css <file>', 'Core framework stylesheet')
   //.option('--core-js <file>', 'Core framework javascript')
   //.option('--extensions <dir>', 'Directory to discover extensions')
   //.option('--vendor <div>', 'Directory to discover vendor files')
   //.option('--theme-css <file>', 'Theme css file')
   //.option('--jquery <file/url>', 'Local jQuery or CDN')
+
   .parse(process.argv);
 
-require('../lib/cli')(program);
+if(program.args[0] === 'help') {
+  var showHelpfor = program.args[1]
+    , fs = require('fs')
+    , join = require('path').join
+    , bowerDir = require('../lib/bowerDir')()
+    , styleDir = join(bowerDir, 'deck.js/themes/style') 
+    , transDir = join(bowerDir, 'deck.js/themes/transition');
+
+  if(!showHelpfor) {
+    console.log('Show help for what?');
+    process.exit();
+  }
+
+  if('theme' === showHelpfor) {
+    fs.readdir(styleDir, function(err, files) {
+      if(err) { throw err; }
+      if(!files.length) {
+        console.log('Hmm... there do not seem to be any theme style files...');
+      } else {
+        console.log('');
+        console.log('  Available themes:');
+        console.log('');
+        files.forEach(function(f) {
+          if(/\.css$/.test(f)) {
+            console.log('    - ' + f.replace('.css',''));
+          }
+        });
+        console.log('');
+      }
+    });
+  }
+
+  if('transition' === showHelpfor) {
+    fs.readdir(transDir, function(err, files) {
+      if(err) { throw err; }
+      if(!files.length) {
+        console.log('Hmm... there do not seem to be any transition files...');
+      } else {
+        console.log('');
+        console.log('  Available transitions:');
+        console.log('');
+        files.forEach(function(f) {
+          if(/\.css$/.test(f)) {
+            console.log('    - ' + f.replace('.css',''));
+          }
+        });
+        console.log('');
+      }
+    });
+  }
+} else {
+  require('../lib/cli')(program);
+}
+
