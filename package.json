@@ -27,7 +27,8 @@
     "async": "~0.2.9",
     "cssmin": "~0.4.1",
     "uglify-js": "~2.3.6",
-    "commander": "~2.0.0"
+    "commander": "~2.0.0",
+    "jade": "~0.35.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

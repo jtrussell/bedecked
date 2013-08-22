@@ -7,8 +7,9 @@ var program = require('commander');
 program
   .version(require('../package.json').version)
   .usage('[options] <file> | help <option>')
-  .option('--theme <name>', 'Set theme by name (protip: "bedecked help theme")')
-  .option('--transition <name>', 'Set transition by name (protip: "bedecked help transition")')
+  .option('--theme [name]', 'Set the theme by name [web-2.0]', 'web-2.0')
+  .option('--transition [name]', 'Set the transition by name [horizontal-slide]', 'horizontal-slide')
+  .option('--engine [engine]', 'Set the template engine [markdown]', 'markdown')
 
   //.option('--core-css <file>', 'Core framework stylesheet')
   //.option('--core-js <file>', 'Core framework javascript')
@@ -68,6 +69,16 @@ if(program.args[0] === 'help') {
         console.log('');
       }
     });
+  }
+
+  if('engine' === showHelpfor) {
+    console.log('');
+    console.log('  Available templating engines:');
+    console.log('');
+    console.log('    - markdown');
+    console.log('    - jade');
+    console.log('    - html');
+    console.log('');
   }
 } else {
   require('../lib/cli')(program);
