@@ -22,65 +22,7 @@ program
   .parse(process.argv);
 
 if(program.args[0] === 'help') {
-  var showHelpfor = program.args[1]
-    , fs = require('fs')
-    , join = require('path').join
-    , bowerDir = require('../lib/bowerDir')()
-    , styleDir = join(bowerDir, 'deck.js/themes/style') 
-    , transDir = join(bowerDir, 'deck.js/themes/transition');
-
-  if(!showHelpfor) {
-    console.log('Show help for what?');
-    process.exit();
-  }
-
-  if('theme' === showHelpfor) {
-    fs.readdir(styleDir, function(err, files) {
-      if(err) { throw err; }
-      if(!files.length) {
-        console.log('Hmm... there do not seem to be any theme style files...');
-      } else {
-        console.log('');
-        console.log('  Available themes:');
-        console.log('');
-        files.forEach(function(f) {
-          if(/\.css$/.test(f)) {
-            console.log('    - ' + f.replace('.css',''));
-          }
-        });
-        console.log('');
-      }
-    });
-  }
-
-  if('transition' === showHelpfor) {
-    fs.readdir(transDir, function(err, files) {
-      if(err) { throw err; }
-      if(!files.length) {
-        console.log('Hmm... there do not seem to be any transition files...');
-      } else {
-        console.log('');
-        console.log('  Available transitions:');
-        console.log('');
-        files.forEach(function(f) {
-          if(/\.css$/.test(f)) {
-            console.log('    - ' + f.replace('.css',''));
-          }
-        });
-        console.log('');
-      }
-    });
-  }
-
-  if('engine' === showHelpfor) {
-    console.log('');
-    console.log('  Available templating engines:');
-    console.log('');
-    console.log('    - markdown');
-    console.log('    - jade');
-    console.log('    - html');
-    console.log('');
-  }
+  require('../lib/showHelpfor')(program.args[1]);
 } else {
   require('../lib/cli')(program);
 }
