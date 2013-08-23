@@ -11,7 +11,7 @@ program
   .option('--transition [name]', 'Set the transition by name [horizontal-slide]', 'horizontal-slide')
   .option('--engine [engine]', 'Set the template engine [markdown]', 'markdown')
   .option('--server', 'Start a live reload server for active presentation development')
-
+  .option('--port [number]', 'Port for server to listen on [8080]', parseInt)
   //.option('--core-css <file>', 'Core framework stylesheet')
   //.option('--core-js <file>', 'Core framework javascript')
   //.option('--extensions <dir>', 'Directory to discover extensions')
