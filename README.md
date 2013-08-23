@@ -58,6 +58,13 @@ bedecked(presentationFile, opts, callback);
 
 *(additional info coming soon)*
 
+### Live Reloading
+
+It would be a real pain to have to run `bedecked` whenever you wanted to see your 
+latest changes. Bedecked ships with a live reload server to support interactive 
+presentation development. Try `bedecked --server my_prez.md` or view `bedecked help server`
+for more information.
+
 ## License
 
 MIT
