@@ -38,6 +38,9 @@ stdout so you'll most often be sending that directly to a file:
 bedecked my_prez.md > my_prez.html
 ```
 
+Bedecked exposes options to switch its theme, transition style, templating engine, 
+and more. 
+
 Run `bedecked --help` for more information.
 
 **NOTE**: bedecked looks for three new line (or two blank lines) in a row to
