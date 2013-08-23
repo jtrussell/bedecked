@@ -28,7 +28,10 @@
     "cssmin": "~0.4.1",
     "uglify-js": "~2.3.6",
     "commander": "~2.0.0",
-    "jade": "~0.35.0"
+    "jade": "~0.35.0",
+    "connect-livereload": "~0.2.0",
+    "connect": "~2.8.5",
+    "tiny-lr": "0.0.4"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
