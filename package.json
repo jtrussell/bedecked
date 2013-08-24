@@ -1,6 +1,6 @@
 {
   "name": "bedecked",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Turn markdown files into html presentations you can share from dropbox",
   "main": "lib/bedecked.js",
   "scripts": {
@@ -37,13 +37,11 @@
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-watch": "~0.5.1",
     "matchdep": "~0.1.2",
-    "grunt-contrib-connect": "~0.3.0",
-    "connect-livereload": "~0.2.0",
-    "grunt-open": "~0.2.1"
+    "grunt-contrib-watch": "~0.5.1",
+    "chai": "~1.7.2",
+    "mocha": "~1.12.0",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-simple-mocha": "~0.4.0"
   }
 }
