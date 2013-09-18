@@ -43,8 +43,7 @@ and more.
 
 Run `bedecked --help` for more information.
 
-**NOTE**: bedecked looks for three new line (or two blank lines) in a row to
-insert slide breaks.
+**NOTE**: bedecked looks for three consecutive new lines to insert slide breaks.
 
 ### API
 
