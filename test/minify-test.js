@@ -1,3 +1,6 @@
+/*global describe, it*/
+
+'use strict';
 
 var join = require('path').join
   , fs = require('fs')

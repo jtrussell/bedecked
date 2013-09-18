@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+  'use strict';
 
   var fs = require('fs')
     , bedecked = require('./lib/bedecked');
@@ -7,11 +8,20 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      gruntfile: 'gruntfile.js',
+      src: 'lib/*.js',
+      tests: 'test/*-test.js'
+    },
+
     simplemocha: {
       all: {
         src: 'test/*-test.js'
       }
-    }, 
+    },
 
     watch: {
       test: {
@@ -29,6 +39,7 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'jshint',
     'test'
   ]);
 
