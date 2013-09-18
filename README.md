@@ -106,6 +106,10 @@ your latest changes. Bedecked ships with a live reload server to support
 interactive presentation development. Try `bedecked --server my_prez.md` or view
 `bedecked help server` for more information.
 
+## Testing
+
+Test and lint with `grunt`.
+
 ## License
 
 MIT
