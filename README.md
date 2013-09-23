@@ -9,6 +9,9 @@ simple way to build snazzy presentations from markdown files that I could export
 as standalone HTML. Pop those guys in your public dropbox folder (or S3, or
 whatever) and share.
 
+Check out our [gh-pages](http://jtrussell.github.io/bedecked) for a basic example.
+The corresponding markdown can be found [there too](https://github.com/jtrussell/bedecked/tree/gh-pages).
+
 ## Installation
 
 Install bedecked globally to get access to the cli with:
