@@ -33,7 +33,7 @@ We're embracing the awesome extensibility of [deck.js](https://github.com/imakew
 
 ## presentations
 
-Did I mention this presentations was created with bedecked?
+Did I mention this presentation was created with bedecked?
 
 > bedecked --theme swiss index.md > index.html
 
