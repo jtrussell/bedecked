@@ -12,6 +12,10 @@ program
   .option('--engine [engine]', 'Set the template engine [markdown]', 'markdown')
   .option('--server', 'Start a live reload server for active presentation development')
   .option('--port [number]', 'Port for server to listen on [9090]', parseInt)
+  .option('--save-theme [file]', 'Register your own theme stylesheet')
+  .option('--save-transition [file]', 'Register your own transition stylesheet')
+  .option('--rm-theme [name]', 'Remove a previously registered theme')
+  .option('--rm-transition [name]', 'Remove a previously registered transition')
   .parse(process.argv);
 
 require('../lib/cli')(program);
