@@ -17,5 +17,9 @@ program
   .option('--rm-theme [name]', 'Remove a previously registered theme')
   .option('--rm-transition [name]', 'Remove a previously registered transition')
   .parse(process.argv);
+  
+if(program.args.length === 1 && program.args[0] === 'help') {
+  program.help();
+}
 
 require('../lib/cli')(program);
