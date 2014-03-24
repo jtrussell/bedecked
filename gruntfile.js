@@ -28,8 +28,16 @@ module.exports = function(grunt) {
         files: ['lib/*.js', 'test/*-test.js'],
         tasks: ['jshint', 'test']
       }
-    }
+    },
 
+    bump: {
+      options: {
+        commitMessage: 'chore: Bump for release (v%VERSION%)',
+        files: ['package.json', 'bower.json'],
+        commitFiles: ['-a'],
+        push: false
+      }
+    }
   });
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
