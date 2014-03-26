@@ -44,7 +44,19 @@ bedecked my_prez.md > my_prez.html
 ```
 
 Bedecked exposes options to switch its theme, transition style, templating engine, 
-and more. 
+and more.
+
+To see a list of available themes try:
+
+```
+bedecked help theme
+```
+
+Same goes for transitions:
+
+```
+bedecked help transition
+```
 
 Run `bedecked --help` for more information.
 
