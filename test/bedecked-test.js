@@ -13,7 +13,7 @@ var join = require('path').join
 var fxd = join(__dirname, 'fixtures');
 
 describe('bedecked', function() {
-  describe('api', function() {
+  describe('api basics', function() {
     var err, $;
     before(function(done) {
       bd(join(fxd, '001.md'), function(e, html) {
@@ -30,6 +30,19 @@ describe('bedecked', function() {
     it('should split into slides', function() {
       expect($('.slides > section').length).to.equal(4);
     });
+
+    it('should add styles and scripts to the page', function() {
+      /**
+       * @todo
+       */
+      expect(false).to.be.true;
+    });
+  });
+
+  describe('api custom opts', function() {
+    /**
+     * @todo
+     */
   });
 });
 
