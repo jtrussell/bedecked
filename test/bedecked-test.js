@@ -1,4 +1,5 @@
 /*global describe, it, before, beforeEach */
+/*jshint -W030 */
 
 'use strict';
 
@@ -12,7 +13,7 @@ var join = require('path').join
 var fxd = join(__dirname, 'fixtures');
 
 describe('bedecked', function() {
-  describe('basics', function() {
+  describe('api', function() {
     var err, $;
     before(function(done) {
       bd(join(fxd, '001.md'), function(e, html) {
@@ -23,7 +24,7 @@ describe('bedecked', function() {
     });
 
     it('should not generate an error', function() {
-      expect(err).to.be.empty();
+      expect(err).to.not.be.ok;
     });
 
     it('should split into slides', function() {
