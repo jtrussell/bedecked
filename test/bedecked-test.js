@@ -32,10 +32,10 @@ describe('bedecked', function() {
     });
 
     it('should add styles and scripts to the page', function() {
-      /**
-       * @todo
-       */
-      expect(false).to.be.true;
+      expect($('link#reveal-core').length).to.equal(1);
+      expect($('link#reveal-theme').length).to.equal(1);
+      expect($('script#reveal-core').length).to.equal(1);
+      expect($('script#reveal-init').length).to.equal(1);
     });
   });
 
