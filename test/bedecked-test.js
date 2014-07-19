@@ -37,6 +37,10 @@ describe('bedecked', function() {
       expect($('script#reveal-core').length).to.equal(1);
       expect($('script#reveal-init').length).to.equal(1);
     });
+
+    it('should not leave any mustache templates', function() {
+      expect($.html()).to.not.match(/{{[^}]+}}/g);
+    });
   });
 
   describe('api custom opts', function() {
