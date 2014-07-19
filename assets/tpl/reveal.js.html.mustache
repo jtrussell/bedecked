@@ -7,10 +7,8 @@
 
   <title>{{title}}</title>
 
-  <!-- build:styles -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/css/reveal.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/css/theme/night.css">
-  <!-- endbuild -->
+  <link id="reveal-core" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/reveal.min.css">
+  <link id="reveal-theme" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/theme/night.css">
 </head>
 <body>
   <div class="reveal">
@@ -26,8 +24,8 @@
   </div>
 
   <!-- build:scripts -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" charset="utf-8">
+  <script id="reveal-core" src="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/js/reveal.js" type="text/javascript" charset="utf-8"></script>
+  <script id="reveal-init" type="text/javascript" charset="utf-8">
     /**
      * @todo pass through bedecked options
      * e.g.
@@ -35,10 +33,24 @@
      * @see https://github.com/hakimel/reveal.js/#configuration
      */
     Reveal.initialize({
-      controls: true,
-      progress: true,
-      history: true,
-      center: true
+      autoSlide: {{optAutoSlide}},
+      autoSlideStoppable: {{optAutoSlideStoppable}},
+      center: {{optCenter}},
+      controls: {{optControls}},
+      embedded: {{optEmbedded}},
+      fragments: {{optFragments}},
+      hideAddressBar: {{optHideAddressBar}},
+      history: {{optHistory}},
+      keyboard: {{optKeyboard}},
+      loop: {{optLoop}},
+      mouseWheel: {{optMouseWheel}},
+      overview: {{optOverview}},
+      previewLinks: {{optPreviewLinks}},
+      progress: {{optProgress}},
+      rtl: {{optRtl}},
+      slideNumber: {{optSlideNumber}},
+      touch: {{optTouch}},
+      viewDistance: {{optViewDistance}}
     });
   </script>
   <!-- endbuild -->

@@ -4,13 +4,40 @@
 
 var program = require('commander');
 
+var parsePool = function(arg) {
+  if(typeof arg === 'string') {
+    return arg.toLowerCase() === 'true';
+  }
+  return !!arg;
+};
+
 program
   .version(require('../package.json').version)
   .usage('[options] <file> | help <option>')
-  .option('--theme [name]', 'Set the theme by name [night]', 'night')
-  .option('--engine [engine]', 'Set the template engine [markdown]', 'markdown')
+  .option('--theme <string>', 'Set the theme by name (default)', 'default')
+  .option('--engine <string>', 'Set the template engine (markdown)', 'markdown')
   .option('--server', 'Start a live reload server for active presentation development')
-  .option('--port [number]', 'Port for server to listen on [9090]', parseInt)
+  .option('--port <int>', 'Port for server to listen on (9090)', parseInt)
+
+  .option('--opt-auto-slide <int>', 'Milliseconds to wait between auto advances', 0)
+  .option('--opt-auto-slide-stoppable <bool>', 'Stop auto advance after use input', true, parseBool)
+  .option('--opt-center <bool>', 'Verically center slides', true, parseBool)
+  .option('--opt-controls <bool>', 'Show controls in bottom right corner', true, parseBool)
+  .option('--opt-embedded <bool>', 'I.e. not full screen presentation', false, parseBool)
+  .option('--opt-fragments <bool>', 'Enable/disable fragments globally', true, parseBool)
+  .option('--opt-hide-address-bar <bool>', 'On mobile devices', true, parseBool)
+  .option('--opt-history <bool>', 'Push slie changes to browser history', false, parseBool)
+  .option('--opt-keyboard <bool>', 'Enable keyboard navigation', true, parseBool)
+  .option('--opt-loop <bool>', 'Loop the presentation', false, parseBool)
+  .option('--opt-mouse-wheel <bool>', 'Enable mousewheel navigation', false, parseBool)
+  .option('--opt-overview <bool>', 'Enable slide overview', true, parseBool)
+  .option('--opt-preview-links <bool>', 'Open links in preview overlays', false, parseBool)
+  .option('--opt-progress <bool>', 'Display presenation progress bar', true, parseBool)
+  .option('--opt-rtl <bool>', 'Advance slides right to left', false, parseBool)
+  .option('--opt-slide-number <bool>', 'Display current slide number', false, parseBool)
+  .option('--opt-touch <bool>', 'Enable touch navigation', true, parseBool)
+  .option('--opt-view-distance <int>', 'Number of slides from current that are visible', 3)
+  
   .parse(process.argv);
   
 if(program.args.length === 1 && program.args[0] === 'help') {
