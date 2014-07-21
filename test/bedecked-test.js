@@ -31,6 +31,10 @@ describe('bedecked', function() {
       expect($('.slides > section').length).to.equal(4);
     });
 
+    it('should nest indented slides', function() {
+      expect($('.slides > section').eq(2).find('section').length).to.equal(2);
+    });
+
     it('should add styles and scripts to the page', function() {
       expect($('link#reveal-core').length).to.equal(1);
       expect($('link#reveal-theme').length).to.equal(1);
