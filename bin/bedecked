@@ -16,6 +16,7 @@ program
   .usage('[options] <file> | help <option>')
   .option('--theme <string>', 'Set the theme by name (default)', 'default')
   .option('--engine <string>', 'Set the template engine (markdown)', 'markdown')
+  .option('--protocol <string>', 'Set the protocol for external scripts and styles (http:)', 'http:')
   .option('--server', 'Start a live reload server for active presentation development')
   .option('--port <int>', 'Port for server to listen on (9090)', parseInt)
 
