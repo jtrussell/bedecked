@@ -36,14 +36,15 @@
     "mkdirp": "^0.3.5"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "matchdep": "~0.1.2",
-    "grunt-contrib-watch": "~0.5.1",
     "chai": "~1.7.2",
-    "mocha": "~1.12.0",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-simple-mocha": "~0.4.0",
+    "cheerio": "^0.17.0",
+    "grunt": "~0.4.1",
     "grunt-bump": "0.0.13",
-    "cheerio": "^0.17.0"
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-simple-mocha": "~0.4.0",
+    "matchdep": "~0.1.2",
+    "mocha": "~1.12.0",
+    "sinon": "^1.10.3"
   }
 }
