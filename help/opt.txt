@@ -1,0 +1,5 @@
+
+  --opt-* options are forwarded to to the reveal.js init function when relevant.
+
+  See https://github.com/hakimel/reveal.js#configuration
+

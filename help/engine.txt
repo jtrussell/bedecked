@@ -1,0 +1,7 @@
+
+  Available templating engines:
+
+    - markdown
+    - jade
+    - html
+
