@@ -71,7 +71,12 @@ be set with the bedecked cli.
 
 Run `bedecked --help` for more information on command line usage.
 
-**NOTE**: bedecked looks for three consecutive new lines to insert slide breaks.
+#### $HOME/.bedeckedrc
+
+Using the same options over and over? Have a favorite theme? Bedecked will read
+options from `$home/.bedeckedrc` if it exists. The file should be in JSON format
+and can override any option listed
+[here](https://github.com/jtrussell/bedecked/blob/master/lib/opts.js).
 
 ### API
 
