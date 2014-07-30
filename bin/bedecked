@@ -45,4 +45,12 @@ if(program.args.length === 1 && program.args[0] === 'help') {
   program.help();
 }
 
+var pkg = require('../package.json')
+  , notifier = require('update-notifier')({
+      packageName: pkg.name,
+      packageVersion: pkg.version,
+      updateCheckInterval: 1000 * 60 * 60 * 24 * 7
+    });
+notifier.notify();
+
 require('../lib/cli')(program);
