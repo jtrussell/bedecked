@@ -65,13 +65,11 @@ bedecked my_prez.md > my_prez.html
 ```
 
 Bedecked has built in options to switch the presentation theme, templating
-engine, start a live reload server, and more. Internally we're using
-[reveal.js][reveal] for presentations and all reveal configuration options can
-be set with the bedecked cli.
+engine, start a live reload server, and more. We're using [reveal.js][reveal]
+for presentations and all reveal configuration options can be set with the
+bedecked cli.
 
 Run `bedecked --help` for more information on command line usage.
-
-**NOTE**: bedecked looks for three consecutive new lines to insert slide breaks.
 
 ### API
 
