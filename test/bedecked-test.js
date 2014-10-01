@@ -35,7 +35,7 @@ describe('bedecked', function() {
     });
 
     it('should nest indented slides', function() {
-      expect($('.slides > section').eq(2).find('section').length).to.equal(2);
+      expect($('.slides > section').eq(2).find('section').length).to.equal(3);
     });
 
     it('should not leave any mustache templates', function() {

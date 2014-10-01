@@ -8,7 +8,7 @@
   <title>{{title}}</title>
 
   <link id="reveal-core" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/reveal.min.css">
-  <link id="reveal-theme" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/theme/night.css">
+  <link id="reveal-theme" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/theme/{{theme}}.css">
 </head>
 <body>
   <div class="reveal">
@@ -26,12 +26,6 @@
   <!-- build:scripts -->
   <script id="reveal-core" src="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/js/reveal.js" type="text/javascript" charset="utf-8"></script>
   <script id="reveal-init" type="text/javascript" charset="utf-8">
-    /**
-     * @todo pass through bedecked options
-     * e.g.
-     * `bedecked --history --no-progress --no-controls`
-     * @see https://github.com/hakimel/reveal.js/#configuration
-     */
     Reveal.initialize({
       autoSlide: {{optAutoSlide}},
       autoSlideStoppable: {{optAutoSlideStoppable}},

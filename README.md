@@ -71,6 +71,16 @@ bedecked cli.
 
 Run `bedecked --help` for more information on command line usage.
 
+<<<<<<< HEAD
+=======
+#### $HOME/.bedeckedrc
+
+Using the same options over and over? Have a favorite theme? Bedecked will read
+options from `$home/.bedeckedrc` if it exists. The file should be in JSON format
+and can override any option listed
+[here](https://github.com/jtrussell/bedecked/blob/master/lib/opts.js).
+
+>>>>>>> origin/reveal
 ### API
 
 The bedecked module exports a single method:

@@ -14,13 +14,13 @@ var parseBool = function(arg) {
 program
   .version(require('../package.json').version)
   .usage('[options] <file> | help <option>')
-  .option('--theme <string>', 'Set the theme by name (default)', 'default')
-  .option('--engine <string>', 'Set the template engine (markdown)', 'markdown')
-  .option('--protocol <string>', 'Set the protocol for external scripts and styles (http:)', 'http:')
+  .option('--theme <string>', 'Set the theme by name (default)')
+  .option('--engine <string>', 'Set the template engine (markdown)')
+  .option('--protocol <string>', 'Set the protocol for external scripts and styles (http:)')
   .option('--server', 'Start a live reload server for active presentation development')
   .option('--port <int>', 'Port for server to listen on (9090)', parseInt)
 
-  .option('--opt-auto-slide <int>', 'Milliseconds to wait between auto advances', 0)
+  .option('--opt-auto-slide <int>', 'Milliseconds to wait between auto advances')
   .option('--opt-auto-slide-stoppable <bool>', 'Stop auto advance after use input', true, parseBool)
   .option('--opt-center <bool>', 'Verically center slides', true, parseBool)
   .option('--opt-controls <bool>', 'Show controls in bottom right corner', true, parseBool)
@@ -37,12 +37,20 @@ program
   .option('--opt-rtl <bool>', 'Advance slides right to left', false, parseBool)
   .option('--opt-slide-number <bool>', 'Display current slide number', false, parseBool)
   .option('--opt-touch <bool>', 'Enable touch navigation', true, parseBool)
-  .option('--opt-view-distance <int>', 'Number of slides from current that are visible', 3)
+  .option('--opt-view-distance <int>', 'Number of slides from current that are visible')
 
   .parse(process.argv);
 
 if(program.args.length === 1 && program.args[0] === 'help') {
   program.help();
 }
+
+var pkg = require('../package.json')
+  , notifier = require('update-notifier')({
+      packageName: pkg.name,
+      packageVersion: pkg.version,
+      updateCheckInterval: 1000 * 60 * 60 * 24 * 7
+    });
+notifier.notify();
 
 require('../lib/cli')(program);
