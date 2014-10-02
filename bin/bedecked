@@ -27,7 +27,7 @@ program
   .option('--opt-embedded <bool>', 'I.e. not full screen presentation', false, parseBool)
   .option('--opt-fragments <bool>', 'Enable/disable fragments globally', true, parseBool)
   .option('--opt-hide-address-bar <bool>', 'On mobile devices', true, parseBool)
-  .option('--opt-history <bool>', 'Push slie changes to browser history', false, parseBool)
+  .option('--opt-history <bool>', 'Push slide changes to browser history', false, parseBool)
   .option('--opt-keyboard <bool>', 'Enable keyboard navigation', true, parseBool)
   .option('--opt-loop <bool>', 'Loop the presentation', false, parseBool)
   .option('--opt-mouse-wheel <bool>', 'Enable mousewheel navigation', false, parseBool)
