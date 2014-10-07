@@ -1,0 +1,2 @@
+The HTML title for your presentation. Defaults to 'Just Another Bedecked
+Presentation'.
