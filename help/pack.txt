@@ -1,0 +1,2 @@
+Use this flag to bedecked to inline all assets. The result will be a self
+contained HTML file. Stylesheets, scripts, and images will be inlined.
