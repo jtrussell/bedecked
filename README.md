@@ -12,7 +12,7 @@ whatever) and share.
 Bedecked looks for consecutive empty lines in your source file to insert slide
 breaks, for example:
 
-```
+```markdown
 ## My first slide
 
 This will be on one slide
@@ -88,7 +88,7 @@ var bedecked = require('bedecked')
   , opts = {
       engine: 'markdown', // markdown | jade | html
       theme: 'default', // See available themes http://www.cdnjs.com/libraries/reveal.js
-      protocol: 'http:', // http: | https: | ''
+      protocol: 'https:', // http: | https: | ''
       title: 'Just Another Bedecked Presentation',
       revealjsVersion: '2.6.2',
 
