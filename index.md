@@ -1,52 +1,97 @@
-# bedecked
-## simple. portable. awesome. presentations.
+# Hello, Bedecked
+## ( &#8594; )
 
 
-## simple
+## Bedecked
 
-Bedecked presentations are simple and that's a feature.
-
-- Author with [markdown](http://daringfireball.net/projects/markdown/) so
-  presentations are dead easy to write and read
-- [jade](http://jade-lang.com/) and vanilla html are supported too (try `bedecked help theme`)
-
-
-## portable
-
-The presentation html is built (sanely) for a single file
-
-- Easy sharing with your public dropbox folder
-- Opens in seconds on _any_ device with a modern browser
-
-(go ahead, try your smartphone. I'll wait)
+> 1 - **verb**<br />
+>   decorate.<br />
+>   "He led us into a room **bedecked** with tinsel"<br />
+> <br />
+> 2 - **noun**<br ./>
+>   awesome presentation generator.<br ./>
+>   "I made this presentaion with **bedecked**."
 
 
-## awesome
+Fancy presentation tools require bulky software or ninja coding and design
+skills.
 
-We're embracing the awesome extensibility of [deck.js](https://github.com/imakewebthings/deck.js) and bundling their most commonly used plugins out the box
+Bedecked does not.
 
-- Try pressing `m` (btw you're on page 4 right now)
-- Use `g` to quickly go to a specific slide
-
-(you can configure these using the api, and hopefully soon with the cli as well)
+<span class="fragment">But if you have those skills, that's cool too.</span>
 
 
-## presentations
+Bedecked inserts slide breaks when there are two or more empty lines in a row:
 
-Did I mention this presentation was created with bedecked?
+```
+ # I'm a slide!
 
-> bedecked --theme swiss index.md > index.html
+ 
+ ## I'm another slide!
+ 
+ 
+ 
+ ## I'm a third!
 
-Take a peek at the [markdown version](http://jtrussell.github.io/bedecked/index.md)
+ With some text.
+```
 
 
-## i can haz prezentation?
+We're using the awesome reavel.js presentation framework. So you can have sweet
+features like basement slides...
 
-Why, you surely can
-
-> npm install -g bedecked
+## ( &#8595; )
 
 
-## looking for more?
+  ... and [lots of other neat stuff](https://github.com/hakimel/reveal.js) too.
 
-Check out the docs on [github](https://github.com/jtrussell/bedecked)
+  ## ( &#8595; )
+
+
+  By the way you make basement slides in bedecked by indenting:
+
+  ```
+   ## I'm a top level side
+   
+   
+     ## I'm a basement slide
+   
+   
+     ## Yet another basement slide
+   
+   
+   ## Back to the top level
+  ```
+
+  ## ( &#8594; )
+
+
+## Markdown + HTML
+Bedecked presentations are just text files. If you know markdown you can make
+awesome presentations.
+
+(If you don't [it's super easy](https://daringfireball.net/projects/markdown/basics))
+
+
+Don't believe me? Check out the markdown for this presentation:
+
+[Clicky.](https://raw.githubusercontent.com/jtrussell/bedecked/gh-pages/index.md)
+
+
+## Why text files?
+
+- Focus on your *content* while writing, not style.
+- Have a text editor? You're ready to start writing.
+- Have a browser? You can view a presentation.
+
+
+Exporting a single HTML file means presentations are easy to share with Dropbox
+or S3.
+
+Mobile users can enjoy your presentations too.
+
+> ( Markdown ) &#65515; ( Presentation HTML )
+
+
+  By the way you don't have to use markdown, we support jade and vanilla HTML
+  too.
