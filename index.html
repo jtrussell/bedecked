@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Just Another Bedecked Presentation</title>
+
+  <link id="reveal-core" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/css/reveal.min.css">
+  <link id="reveal-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/css/theme/serif.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+        <section>
+          <h1 id="hello-bedecked">Hello, Bedecked</h1>
+<h2 id="-8594-">( &#8594; )</h2>
+
+        </section>
+        <section>
+          <h2 id="bedecked">Bedecked</h2>
+<blockquote>
+<p>1 - <strong>verb</strong><br />
+  decorate.<br />
+  &quot;He led us into a room <strong>bedecked</strong> with tinsel&quot;<br />
+<br />
+2 - <strong>noun</strong><br ./>
+  awesome presentation generator.<br ./>
+  &quot;I made this presentaion with <strong>bedecked</strong>.&quot;</p>
+</blockquote>
+
+        </section>
+        <section>
+          <p>Fancy presentation tools require bulky software or ninja coding and design
+skills.</p>
+<p>Bedecked does not.</p>
+<p><span class="fragment">But if you have those skills, that&#39;s cool too.</span></p>
+
+        </section>
+        <section>
+          <p>Bedecked inserts slide breaks when there are two or more empty lines in a row:</p>
+<pre><code> # I&#39;m a slide!
+
+
+ ## I&#39;m another slide!
+
+
+
+ ## I&#39;m a third!
+
+ With some text.
+</code></pre>
+        </section>
+        <section>
+          <section><p>We&#39;re using the awesome reavel.js presentation framework. So you can have sweet
+features like basement slides...</p>
+<h2 id="-8595-">( &#8595; )</h2>
+</section><section><p>... and <a href="https://github.com/hakimel/reveal.js">lots of other neat stuff</a> too.</p>
+<h2 id="-8595-">( &#8595; )</h2>
+</section><section><p>By the way you make basement slides in bedecked by indenting:</p>
+<pre><code> ## I&#39;m a top level side
+
+
+   ## I&#39;m a basement slide
+
+
+   ## Yet another basement slide
+
+
+ ## Back to the top level
+</code></pre><h2 id="-8594-">( &#8594; )</h2>
+</section>
+        </section>
+        <section>
+          <h2 id="markdown-html">Markdown + HTML</h2>
+<p>Bedecked presentations are just text files. If you know markdown you can make
+awesome presentations.</p>
+<p>(If you don&#39;t <a href="https://daringfireball.net/projects/markdown/basics">it&#39;s super easy</a>)</p>
+
+        </section>
+        <section>
+          <p>Don&#39;t believe me? Check out the markdown for this presentation:</p>
+<p><a href="https://raw.githubusercontent.com/jtrussell/bedecked/gh-pages/index.md">Clicky.</a></p>
+
+        </section>
+        <section>
+          <h2 id="why-text-files-">Why text files?</h2>
+<ul>
+<li>Focus on your <em>content</em> while writing, not style.</li>
+<li>Have a text editor? You&#39;re ready to start writing.</li>
+<li>Have a browser? You can view a presentation.</li>
+</ul>
+
+        </section>
+        <section>
+          <section><p>Exporting a single HTML file means presentations are easy to share with Dropbox
+or S3.</p>
+<p>Mobile users can enjoy your presentations too.</p>
+<blockquote>
+<p>( Markdown ) &#65515; ( Presentation HTML )</p>
+</blockquote>
+</section><section><p>By the way you don&#39;t have to use markdown, jade and vanilla HTML are fine too.</p>
+</section>
+        </section>
+        <section>
+          <h2 id="sold-where-can-i-get-it-">Sold. Where can I get it?</h2>
+<ul>
+<li>On <a href="https://www.npmjs.org/package/bedecked">npm</a></li>
+<li>on <a href="https://github.com/jtrussell/bedecked">github</a></li>
+</ul>
+
+        </section>
+
+    </div>
+  </div>
+
+  <!-- build:scripts -->
+  <script id="reveal-core" src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/2.6.2/js/reveal.js" type="text/javascript" charset="utf-8"></script>
+  <script id="reveal-init" type="text/javascript" charset="utf-8">
+    Reveal.initialize({
+      autoSlide: 0,
+      autoSlideStoppable: true,
+      center: true,
+      controls: true,
+      embedded: false,
+      fragments: true,
+      hideAddressBar: true,
+      history: true,
+      keyboard: true,
+      loop: false,
+      mouseWheel: false,
+      overview: true,
+      previewLinks: false,
+      progress: true,
+      rtl: false,
+      slideNumber: false,
+      touch: true,
+      viewDistance: 3
+    });
+  </script>
+  <!-- endbuild -->
+</body>
+</html>
