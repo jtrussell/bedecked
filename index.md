@@ -93,5 +93,10 @@ Mobile users can enjoy your presentations too.
 > ( Markdown ) &#65515; ( Presentation HTML )
 
 
-  By the way you don't have to use markdown, we support jade and vanilla HTML
-  too.
+  By the way you don't have to use markdown, jade and vanilla HTML are fine too.
+
+
+## Sold. Where can I get it?
+
+- On [npm](https://www.npmjs.org/package/bedecked)
+- on [github](https://github.com/jtrussell/bedecked)
