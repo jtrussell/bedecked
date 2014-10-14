@@ -1,7 +1,4 @@
 {
   "name": "bedecked",
-  "version": "0.5.3",
-  "dependencies": {
-    "deck.js": "latest"
-  }
+  "version": "0.6.0"
 }

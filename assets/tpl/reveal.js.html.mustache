@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>{{title}}</title>
+
+  <link id="reveal-core" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/reveal.min.css">
+  <link id="reveal-theme" rel="stylesheet" href="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/css/theme/{{theme}}.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      {{#slides}}
+        <section>
+          {{{html}}}
+        </section>
+      {{/slides}}
+
+    </div>
+  </div>
+
+  <!-- build:scripts -->
+  <script id="reveal-core" src="{{protocol}}//cdnjs.cloudflare.com/ajax/libs/reveal.js/{{revealjsVersion}}/js/reveal.js" type="text/javascript" charset="utf-8"></script>
+  <script id="reveal-init" type="text/javascript" charset="utf-8">
+    Reveal.initialize({
+      autoSlide: {{optAutoSlide}},
+      autoSlideStoppable: {{optAutoSlideStoppable}},
+      center: {{optCenter}},
+      controls: {{optControls}},
+      embedded: {{optEmbedded}},
+      fragments: {{optFragments}},
+      hideAddressBar: {{optHideAddressBar}},
+      history: {{optHistory}},
+      keyboard: {{optKeyboard}},
+      loop: {{optLoop}},
+      mouseWheel: {{optMouseWheel}},
+      overview: {{optOverview}},
+      previewLinks: {{optPreviewLinks}},
+      progress: {{optProgress}},
+      rtl: {{optRtl}},
+      slideNumber: {{optSlideNumber}},
+      touch: {{optTouch}},
+      viewDistance: {{optViewDistance}}
+    });
+  </script>
+  <!-- endbuild -->
+</body>
+</html>

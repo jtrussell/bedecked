@@ -1,0 +1,5 @@
+Use this flag to start a connect server from which bedecked will serve your
+generated presentation. While the server is running bedecked will watch <file>
+for changes and perform a live reload for all connected browser windows.
+
+Your presentation html will not be written to stdout.
