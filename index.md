@@ -93,7 +93,7 @@ Mobile users can enjoy your presentations too.
 > ( Markdown ) &#65515; ( Presentation HTML )
 
 
-  By the way you don't have to use markdown, jade and vanilla HTML are fine too.
+  By the way you don't have to use markdown. Jade and vanilla HTML are fine too.
 
 
 ## Sold. Where can I get it?
