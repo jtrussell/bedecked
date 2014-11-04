@@ -21,6 +21,15 @@ Bedecked does not.
 <span class="fragment">But if you have those skills, that's cool too.</span>
 
 
+Presentations are written as text files, e.g. markdown:
+
+```
+# I'm a slide title!
+
+I'm some slide text!
+```
+
+
 Bedecked inserts slide breaks when there are two or more empty lines in a row:
 
 ```
