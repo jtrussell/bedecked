@@ -135,6 +135,11 @@ Test and lint with `grunt`.
 
 Use `grunt watch` to run tests interactively.
 
+## Getting Help
+
+Use the tag **bedecked** on Stack Overflow. For quick things I can be reached on
+twitter @jusrussell.
+
 ## Changelog
 
 - v0.6.0 2014-10-14 Switch to reveal.js for presentation framework. Add support
