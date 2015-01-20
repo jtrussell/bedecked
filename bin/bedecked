@@ -18,6 +18,7 @@ program
   .option('--engine <string>', 'Set the template engine (markdown)')
   .option('--protocol <string>', 'Set the protocol for external scripts and styles (https:)')
   .option('--server', 'Start a live reload server for active presentation development')
+  .option('--pack', 'Pack (inline) external assets into your html file')
   .option('--port <int>', 'Port for server to listen on (9090)', parseInt)
 
   .option('--opt-auto-slide <int>', 'Milliseconds to wait between auto advances')

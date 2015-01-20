@@ -23,6 +23,7 @@
   "dependencies": {
     "async": "^0.2.9",
     "bepacked": "0.0.1",
+    "cheerio": "^0.17.0",
     "commander": "^2.0.0",
     "connect": "^2.8.5",
     "connect-livereload": "^0.2.0",
@@ -32,8 +33,7 @@
     "mustache": "^0.7.2",
     "open": "0.0.4",
     "tiny-lr": "0.0.4",
-    "update-notifier": "^0.2.0",
-    "cheerio": "^0.17.0"
+    "update-notifier": "^0.2.0"
   },
   "devDependencies": {
     "chai": "~1.7.2",
