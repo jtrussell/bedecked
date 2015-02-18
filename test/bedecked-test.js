@@ -60,61 +60,67 @@ describe('bedecked', function() {
     });
   });
 
-  describe('api custom opts', function() {
-    var err, $;
+describe('api custom opts', function() {
+  var err, $;
 
-    var bdOpts = {
-      engine: 'jade',
-      protocol: 'https:',
-      revealjsVersion: '3.7.6',
-      theme: 'night',
-      title: 'Awesome prez',
-    };
+  var bdOpts = {
+    engine: 'jade',
+    protocol: 'https:',
+    revealjsVersion: '3.7.6',
+    theme: 'night',
+    title: 'Awesome prez',
+  };
 
-    var revealOpts = {
-      optAutoSlide: 1,
-      optAutoSlideStoppable: false,
-      optCenter: false,
-      optControls: false,
-      optEmbedded: true,
-      optFragments: false,
-      optHideAddressBar: false,
-      optHistory: true,
-      optKeyboard: false,
-      optLoop: true,
-      optMouseWheel: true,
-      optOverview: false,
-      optPreviewLinks: true,
-      optProgress: false,
-      optRtl: true,
-      optSlideNumber: true,
-      optTouch: false,
-      optViewDistance: 7
-    };
+  var revealOpts = {
+    optAutoSlide: 1,
+    optAutoSlideStoppable: false,
+    optBackgroundTransition: 'convex',
+    optCenter: false,
+    optControls: false,
+    optEmbedded: true,
+    optFragments: false,
+    optHelp: false,
+    optHideAddressBar: false,
+    optHistory: true,
+    optKeyboard: false,
+    optLoop: true,
+    optMouseWheel: true,
+    optOverview: false,
+    optParallaxBackgroundImage: 'http://example.com/foobar.jpg',
+    optParallaxBackgroundSize: '200px 400px',
+    optPreviewLinks: true,
+    optProgress: false,
+    optRtl: true,
+    optSlideNumber: true,
+    optTouch: false,
+    optTransition: 'slide',
+    optTransitionSpeed: 'fast',
+    optViewDistance: 7
+  };
 
-    before(function(done) {
-      bd(join(fxd, '002.jade'), _.extend({}, bdOpts, revealOpts), function(e, html) {
-        err = e;
-        $ = cheerio.load(html);
-        done();
-      });
-    });
-
-    it('should pass through options to reaveal.js', function() {
-      var guts = $('script#reveal-init').html();
-      var Reveal = {
-        initialize: sinon.spy()
-      };
-      var fn = new Function('Reveal', guts);
-      fn(Reveal);
-      var rOpts = {};
-      Object.keys(revealOpts).forEach(function(keyOrig) {
-        var key = keyOrig.slice(3);
-        key = key.charAt(0).toLowerCase() + key.slice(1);
-        rOpts[key] = revealOpts[keyOrig];
-      });
-      expect(Reveal.initialize.firstCall.args[0]).to.deep.equal(rOpts);
+  before(function(done) {
+    bd(join(fxd, '002.jade'), _.extend({}, bdOpts, revealOpts), function(e, html) {
+      err = e;
+      $ = cheerio.load(html);
+      done();
     });
   });
+
+  it('should pass through options to reaveal.js', function() {
+    var guts = $('script#reveal-init').html();
+    var Reveal = {
+      initialize: sinon.spy()
+    };
+    var fn = new Function('Reveal', guts);
+    fn(Reveal);
+    var rOpts = {};
+    Object.keys(revealOpts).forEach(function(keyOrig) {
+      var key = keyOrig.slice(3);
+      key = key.charAt(0).toLowerCase() + key.slice(1);
+      rOpts[key] = revealOpts[keyOrig];
+    });
+    expect(Reveal.initialize.firstCall.args[0]).to.deep.equal(rOpts);
+  });
+});
 });
 

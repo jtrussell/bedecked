@@ -38,6 +38,12 @@ program
   .option('--opt-slide-number <bool>', 'Display current slide number', parseBool)
   .option('--opt-touch <bool>', 'Enable touch navigation', parseBool)
   .option('--opt-view-distance <int>', 'Number of slides from current that are visible')
+  .options('--opt-background-transition <string>', 'Set the background transition')
+  .options('--opt-help <bool>', 'Show help on "?"', parseBool)
+  .options('--opt-parallax-background-image <string>', 'The parallax backgroud image')
+  .options('--opt-parallax-background-size <string>', 'The parallax background size')
+  .options('--opt-transition <string>', 'The slide transition')
+  .options('--opt-transition-speed <string>', 'The transition speed')
 
   .parse(process.argv);
 

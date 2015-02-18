@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=1024, user-scalable=no">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
 
   <title>{{title}}</title>
 
@@ -29,21 +29,27 @@
     Reveal.initialize({
       autoSlide: {{optAutoSlide}},
       autoSlideStoppable: {{optAutoSlideStoppable}},
+      backgroundTransition: '{{{optBackgroundTransition}}}',
       center: {{optCenter}},
       controls: {{optControls}},
       embedded: {{optEmbedded}},
       fragments: {{optFragments}},
+      help: {{optHelp}},
       hideAddressBar: {{optHideAddressBar}},
       history: {{optHistory}},
       keyboard: {{optKeyboard}},
       loop: {{optLoop}},
       mouseWheel: {{optMouseWheel}},
       overview: {{optOverview}},
+      parallaxBackgroundImage: '{{{optParallaxBackgroundImage}}}',
+      parallaxBackgroundSize: '{{{optParallaxBackgroundSize}}}',
       previewLinks: {{optPreviewLinks}},
       progress: {{optProgress}},
       rtl: {{optRtl}},
       slideNumber: {{optSlideNumber}},
       touch: {{optTouch}},
+      transition: '{{{optTransition}}}',
+      transitionSpeed: '{{{optTransitionSpeed}}}',
       viewDistance: {{optViewDistance}}
     });
   </script>
