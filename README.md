@@ -142,6 +142,7 @@ twitter @jusrussell.
 
 ## Changelog
 
+- v0.8.0 2015-02-19 Use reveal.js@3.0.0
 - v0.6.0 2014-10-14 Switch to reveal.js for presentation framework. Add support
   for ~/.bedeckedrc config files.
 
