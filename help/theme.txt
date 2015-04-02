@@ -1,13 +1,17 @@
 May be any of the themes provided by current version of reveal. Search cdnjs.com
-for reveal.js to see which theme css files are provided. With version 2.6.2 of
+for reveal.js to see which theme css files are provided. With version 3.0.0 of
 reveal.js the following themes are available:
 
   - beige
+  - black
   - blood
-  - default
+  - league
   - moon
   - night
   - serif
   - simple
   - sky
   - solarized
+  - white
+
+The default theme is "black".
