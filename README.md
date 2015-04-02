@@ -87,10 +87,10 @@ var bedecked = require('bedecked')
   , presentationFile = 'path/to/my/prez.md'
   , opts = {
       engine: 'markdown', // markdown | jade | html
-      theme: 'default', // See available themes http://www.cdnjs.com/libraries/reveal.js
+      theme: 'black', // See available themes http://www.cdnjs.com/libraries/reveal.js
       protocol: 'https:', // http: | https: | ''
       title: 'Just Another Bedecked Presentation',
-      revealjsVersion: '2.6.2',
+      revealjsVersion: '3.0.0',
 
       // See https://github.com/hakimel/reveal.js#configuration
       optAutoSlide: 0,
@@ -142,6 +142,7 @@ twitter @jusrussell.
 
 ## Changelog
 
+- v0.8.1 2015-02-19 Fix default theme
 - v0.8.0 2015-02-19 Use reveal.js@3.0.0
 - v0.6.0 2014-10-14 Switch to reveal.js for presentation framework. Add support
   for ~/.bedeckedrc config files.
