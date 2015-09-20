@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     bump: {
       options: {
         commitMessage: 'chore: Bump for release (v%VERSION%)',
-        files: ['package.json', 'bower.json'],
+        files: ['package.json'],
         commitFiles: ['-a'],
         push: false
       }
