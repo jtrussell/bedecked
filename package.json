@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^0.2.9",
-    "bepacked": "0.0.1",
+    "bepacked": "^0.0.2",
     "cheerio": "^0.17.0",
     "commander": "^2.0.0",
     "connect": "^2.8.5",
