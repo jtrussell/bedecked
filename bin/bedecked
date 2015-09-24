@@ -22,7 +22,7 @@ program
   .option('--port <int>', 'Port for server to listen on (9090)', parseInt)
 
   .option('--opt-auto-slide <int>', 'Milliseconds to wait between auto advances')
-  .option('--opt-auto-slide-stoppable <bool>', 'Stop auto advance after use input', parseBool)
+  .option('--opt-auto-slide-stoppable <bool>', 'Stop auto advance after user input', parseBool)
   .option('--opt-center <bool>', 'Verically center slides', parseBool)
   .option('--opt-controls <bool>', 'Show controls in bottom right corner', parseBool)
   .option('--opt-embedded <bool>', 'I.e. not full screen presentation', parseBool)
