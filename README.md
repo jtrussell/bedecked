@@ -129,6 +129,13 @@ your latest changes. Bedecked ships with a live reload server to support
 interactive presentation development. Try `bedecked --server my_prez.md` or view
 `bedecked help server` for more information.
 
+The default port `bedecked --server` uses is `9090`. You can set a different
+port by adding the `--port <portNumber>` option:
+
+```
+bedecked --port 80 --server my_prez.md
+```
+
 ## Testing
 
 Test and lint with `grunt`.
