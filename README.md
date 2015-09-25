@@ -136,6 +136,9 @@ port by adding the `--port <portNumber>` option:
 bedecked --port 80 --server my_prez.md
 ```
 
+Note that the `server` and `port` options are only available with the bedecked
+cli.
+
 ## Testing
 
 Test and lint with `grunt`.
