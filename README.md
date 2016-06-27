@@ -1,4 +1,4 @@
-# Bedecked
+# Bedecked [![Build Status](https://travis-ci.org/jtrussell/bedecked.svg?branch=master)](https://travis-ci.org/jtrussell/bedecked)
 
 Bedecked converts markdown files to portable html5 presentations. I'm open to
 adding support for other templating engines too, right bedecked also supports
