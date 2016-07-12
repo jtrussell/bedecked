@@ -1,4 +1,4 @@
-/*global describe, it, before, beforeEach */
+/*global describe, it, before */
 /*jshint -W030 */
 /*jshint -W054 */
 
