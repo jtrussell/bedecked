@@ -46,7 +46,7 @@ Bedecked inserts slide breaks when there are two or more empty lines in a row:
 ```
 
 
-We're using the awesome reavel.js presentation framework. So you can have sweet
+We're using the awesome reveal.js presentation framework. So you can have sweet
 features like basement slides...
 
 ## ( &#8595; )
