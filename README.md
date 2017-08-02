@@ -139,6 +139,52 @@ bedecked --port 80 --server my_prez.md
 Note that the `server` and `port` options are only available with the bedecked
 cli.
 
+## Docker support
+
+Bedecked features Docker support. A Dockerfile is provided and there is a [Bedecked Docker image](https://hub.docker.com/r/jtrussell/bedecked/) available on Docker Hub [built automatically](https://docs.docker.com/docker-hub/builds/) from source on each commit.
+
+You can develop, build and run Bedecked using Docker. You can also package and run Bedecked presentations as self-contained Docker images.
+
+No installation other than Docker is necessary in any case.
+
+### Develop & Build
+
+A Dockerfile is included to allow you to develop and build Bedecked using standard Docker workflow.
+
+#### Build from current source dir:
+
+```docker build -t bedecked .```
+
+#### Run built image:
+
+```docker run --rm -it -p 9090:9090 bedecked your_prez.md --server [options...]```
+
+### Run a presentation
+
+You can run your local Bedecked presentations without installing anything (other than Docker):
+
+```
+$ docker run --rm -it -p 9090:9090 -v [your_host_prez_dir]:/presentation/ jtrussell/bedecked /presentation/your_prez_file.md --server [other options...]
+```
+
+Using ```--rm``` instead of ```-d``` makes the container to not go to background and to be deleted after stop. Should stop by ```CTRL+C```'ing it, but doesn't work because of #28. Use ```docker stop``` from another terminal, instead.
+
+### Package
+
+Just create a file named ```Dockerfile``` in your presentation's source directory. Use the following as example and customize as needed:
+
+```
+FROM jtrussell/bedecked
+
+# Add presentation file(s)
+COPY index.md /presentation/
+
+# Set options for Bedecked executable
+CMD [ "/presentation/index.md", "--server", "--opt-slide-number", "true", "--opt-slide-number", "true", "--opt-mouse-wheel", "true" ]
+```
+
+Build and run the resulting image using standard Docker workflow. See Docker docs for more information.
+
 ## Testing
 
 Test and lint with `grunt`.
